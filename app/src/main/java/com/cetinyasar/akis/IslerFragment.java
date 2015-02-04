@@ -29,33 +29,21 @@ public class IslerFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(inflater.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
-       // mAdapter = new PanoAdapter(this);
-        //mRecyclerView.setAdapter(mAdapter);
-
-//        List<? extends Map<String, ?>> str = new ArrayList<HashMap<String,String>>();
-//        String[] aaa = new String[0];
-//        int[] bbb = new int[0];
-
 
         mAdapter = new PanoAdapter(this);
         //This is the code to provide a sectioned list
-        List<SimpleSectionedRecyclerViewAdapter.Section> sections =
-                new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
-
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections = new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
         //Sections
-        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"Section 1"));
-        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(2,"Section 2"));
-//        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(12,"Section 3"));
-//        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(14,"Section 4"));
-//        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(20,"Section 5"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"Diğer Her Şey"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(2,"beklemede"));
 
-        //Add your adapter to the sectionAdapter
         SimpleSectionedRecyclerViewAdapter.Section[] dummy = new SimpleSectionedRecyclerViewAdapter.Section[sections.size()];
         SimpleSectionedRecyclerViewAdapter mSectionedAdapter = new
                 SimpleSectionedRecyclerViewAdapter(rootView.getContext(),R.layout.pano_elemani,R.id.txtAdi,mAdapter);
         mSectionedAdapter.setSections(sections.toArray(dummy));
 
         //Apply this adapter to the RecyclerView
+        //mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setAdapter(mSectionedAdapter);
 
 

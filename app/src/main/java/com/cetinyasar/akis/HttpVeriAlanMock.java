@@ -31,7 +31,7 @@ public class HttpVeriAlanMock implements IHttpVeriAlan {
         retVal.Panolar.add(pano2);
 
         Pano pano3 = new Pano();
-        pano3.Ad = "PANO 2";
+        pano3.Ad = "PANO 3";
         pano3.Id = 3;
         pano3.Isler = new ArrayList<AramaSonucuIsAkisiInstance>();
         pano3.Isler.add(0, new AramaSonucuIsAkisiInstance(){{Baslik = "Pano 3 Başlık 1"; Aciklama = "Açıklama 1";}});
